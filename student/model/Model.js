@@ -12,6 +12,6 @@ const PostSchema = mongoose.Schema({
   },
 });
 
-const studentModel = mongoose.model("PostModel", PostSchema);
+const studentModel = mongoose.model("studentModel", PostSchema);
 
 module.exports = studentModel;
