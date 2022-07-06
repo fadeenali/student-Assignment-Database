@@ -13,7 +13,7 @@ app.use("/student", Student_Controller);
 const main = async () => {
   try {
     await mongoose
-      .connect("mongodb+srv://fardeenali:<password>@cluster0.rjiu1.mongodb.net/test")
+      .connect("mongodb+srv://fardeenali:8319776090@cluster0.rjiu1.mongodb.net/student")
       .then(() => {
         console.log("DB is connected");
       });
