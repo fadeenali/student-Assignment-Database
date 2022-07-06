@@ -24,17 +24,17 @@ router.get("/studentList", async (req, res) => {
 });
 
 router.post("/add", async (req, res) => {
-  const dataWillBe = new StudentModel({
-    studentFirstName: req.body.studentFirstName,
-    collegeName: req.body.collegeName,
-    location: req.body.location,
-  });
+  const reqobj = req.body
+  console.log(reqobj)
+  const dataWillBe = new StudentModel(reqobj);
   try {
     const data = await dataWillBe.save();
     const result = { result: "success" };
     res.json(result);
   } catch (error) {
+    
     res.status(401).json(error)
+
   }
 });
 
