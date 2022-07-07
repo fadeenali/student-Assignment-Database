@@ -15,7 +15,7 @@ const main = async () => {
   try {
     await mongoose
       .connect(
-        "mongodb+srv://fardeenali:8319776090@cluster0.rjiu1.mongodb.net/studentAsignment"
+        "mongodb+srv://fardeenali:8319776090@cluster0.rjiu1.mongodb.net/?retryWrites=true"
       )
       .then(() => {
         console.log("DB is connected");
