@@ -5,10 +5,7 @@ const Student_Controller = require("./student/controller/Student_Controller");
 const app = express();
 const port = process.env.PORT || 5000;
 
-
-
-
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.json());
 
 // Routes
 app.use("/student", Student_Controller);
@@ -17,7 +14,9 @@ app.use("/student", Student_Controller);
 const main = async () => {
   try {
     await mongoose
-      .connect("mongodb+srv://fardeenali:8319776090@cluster0.rjiu1.mongodb.net/studentDB")
+      .connect(
+        "mongodb+srv://fardeenali:8319776090@cluster0.rjiu1.mongodb.net/test"
+      )
       .then(() => {
         console.log("DB is connected");
       });
